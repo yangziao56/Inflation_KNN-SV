@@ -1,8 +1,8 @@
 # Inflation_KNN-SV
 
 
-# Install Package
+## Install Package
 pip install -r requirements.txt
 
-# Run Experiments
+## Run Experiments
 bash run_sv.sh
