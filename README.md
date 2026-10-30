@@ -1,43 +1,34 @@
-<p align="center">
-  <img src="assets/readme-banner.svg" width="100%" alt="Calibrated KNN-Shapley — A clearer view of training-data value." />
-</p>
-
-### On the Inflation of KNN-Shapley Value
+# On the Inflation of KNN-Shapley Value
 
 **Ziao Yang**, Han Yue, Jian Chen, and Hongfu Liu
 
-**[PDF](https://arxiv.org/pdf/2405.17489)** · **[Paper](https://arxiv.org/abs/2405.17489)** · **[Explore code](#explore-the-code)**
+> **[Read the paper](https://arxiv.org/pdf/2405.17489)** · [arXiv](https://arxiv.org/abs/2405.17489)  
+> Calibrated data valuation across image, text, and tabular datasets.
 
----
+![KNN-Shapley: neighborhood geometry and calibrated data valuation.](assets/readme-banner.svg)
 
-Study inflation in KNN-Shapley values and calibrated data valuation across image, text, and tabular datasets.
+## From data to value
 
-## Explore the code
-
-| Component | Entry point |
-| :--- | :--- |
-| Valuation experiments | [`sv.py`](sv.py) |
-| Experiment configurations | [`run_sv.sh`](run_sv.sh) · [`config.py`](config.py) |
-| Dataset preparation | [`prepare_data.py`](prepare_data.py) |
-| Utilities | [`utility_func.py`](utility_func.py) · [`helper.py`](helper.py) |
-
-## Getting started
+**Configure** [`run_sv.sh`](run_sv.sh) and [`config.py`](config.py).  
+**Prepare** datasets with [`prepare_data.py`](prepare_data.py).  
+**Evaluate** training-data values with [`sv.py`](sv.py).
 
 ```bash
 git clone https://github.com/yangziao56/Inflation_KNN-SV.git
 cd Inflation_KNN-SV
 pip install -r requirements.txt
-```
-
-Review the dataset settings in [`run_sv.sh`](run_sv.sh), then launch the selected experiments:
-
-```bash
 bash run_sv.sh
 ```
 
-The experiment script includes CKNN configurations for CIFAR-10, tabular datasets, AG News, SST-2, and 20 Newsgroups.
+Review the dataset settings in `run_sv.sh` before launching. Its CKNN configurations cover CIFAR-10, tabular datasets, AG News, SST-2, and 20 Newsgroups.
 
----
+<details>
+<summary><strong>Supporting utilities</strong></summary>
+
+- [`utility_func.py`](utility_func.py)
+- [`helper.py`](helper.py)
+
+</details>
 
 <details>
 <summary><strong>Citation</strong></summary>
